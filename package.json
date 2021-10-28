@@ -1,0 +1,24 @@
+{
+  "name": "webpack-sri",
+  "version": "0.0.1",
+  "description": "Webpack plugin for enabling Subresource Integrity",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devchenyan/webpack-sri.git"
+  },
+  "keywords": [
+    "webpack",
+    "plugin",
+    "integrity"
+  ],
+  "author": "Echo Chen <547618466@qq.com> (https://github.com/devchenyan)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/devchenyan/webpack-sri/issues"
+  },
+  "homepage": "https://github.com/devchenyan/webpack-sri#readme"
+}
