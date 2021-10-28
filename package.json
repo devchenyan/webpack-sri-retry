@@ -1,5 +1,5 @@
 {
-  "name": "webpack-sri",
+  "name": "webpack-sri-plugin",
   "version": "0.0.1",
   "description": "Webpack plugin for enabling Subresource Integrity",
   "main": "index.js",
@@ -20,5 +20,11 @@
   "bugs": {
     "url": "https://github.com/devchenyan/webpack-sri/issues"
   },
-  "homepage": "https://github.com/devchenyan/webpack-sri#readme"
+  "homepage": "https://github.com/devchenyan/webpack-sri#readme",
+  "devDependencies": {
+    "script-ext-html-webpack-plugin": "^2.1.5",
+    "webpack-assets-manifest": "4.0.6",
+    "webpack-retry-load-plugin": "^1.1.6",
+    "webpack-subresource-integrity": "1.5.2"
+  }
 }
