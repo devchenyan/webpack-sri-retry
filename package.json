@@ -1,14 +1,14 @@
 {
-  "name": "webpack-sri-retry-plugin",
+  "name": "webpack-sri-retry",
   "version": "0.0.1",
   "description": "Webpack plugin for enabling Subresource Integrity and retry load bundle from other cdn/server",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/devchenyan/webpack-sri-retry-plugin.git"
+    "url": "git+https://github.com/devchenyan/webpack-sri-retry.git"
   },
   "keywords": [
     "webpack",
@@ -18,17 +18,23 @@
   "author": "Echo Chen <547618466@qq.com> (https://github.com/devchenyan)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/devchenyan/webpack-sri-retry-plugin/issues"
+    "url": "https://github.com/devchenyan/webpack-sri-retry/issues"
   },
-  "homepage": "https://github.com/devchenyan/webpack-sri-retry-plugin#readme",
+  "homepage": "https://github.com/devchenyan/webpack-sri-retry#readme",
   "devDependencies": {
+    "html-webpack-plugin": "^4.0.0",
     "script-ext-html-webpack-plugin": "^2.1.5",
+    "webpack": "^4.0.0",
     "webpack-assets-manifest": "4.0.6",
+    "webpack-merge": "^5.8.0",
     "webpack-retry-load-plugin": "^1.1.6",
     "webpack-subresource-integrity": "1.5.2"
   },
   "peerDependencies": {
-    "webpack": "^4.0.0",
-    "html-webpack-plugin": "^4.0.0"
+    "html-webpack-plugin": "^4.0.0",
+    "webpack": "^4.0.0"
+  },
+  "dependencies": {
+    "lodash.defaultsdeep": "^4.6.1"
   }
 }
