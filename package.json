@@ -21,10 +21,9 @@
     "url": "https://github.com/devchenyan/webpack-sri-retry/issues"
   },
   "homepage": "https://github.com/devchenyan/webpack-sri-retry#readme",
-  "devDependencies": {
+  "dependencies": {
     "html-webpack-plugin": "^4.0.0",
     "script-ext-html-webpack-plugin": "^2.1.5",
-    "webpack": "^4.0.0",
     "webpack-assets-manifest": "4.0.6",
     "webpack-merge": "^5.8.0",
     "webpack-retry-load-plugin": "^1.1.6",
@@ -33,8 +32,5 @@
   "peerDependencies": {
     "html-webpack-plugin": "^4.0.0",
     "webpack": "^4.0.0"
-  },
-  "dependencies": {
-    "lodash.defaultsdeep": "^4.6.1"
   }
 }
