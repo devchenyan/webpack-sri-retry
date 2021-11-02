@@ -1,6 +1,6 @@
 {
   "name": "webpack-sri-retry",
-  "version": "0.0.3-3",
+  "version": "0.0.3",
   "description": "Webpack plugin for enabling Subresource Integrity and retry load bundle from other cdn/server",
   "main": "lib/index.js",
   "scripts": {
