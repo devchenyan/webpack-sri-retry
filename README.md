@@ -18,7 +18,7 @@ yarn add --dev webpack-sri-retry
 
 # 使用
 ## mergedConfig
-合并weback的config，不改变config；通常webapck配置文件中，使用该方法
+合并weback的config，不改变config。通常webapck配置文件中，使用该方法
 ```
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { mergedConfig } = require("webpack-sri-retry");
@@ -39,25 +39,22 @@ module.exports = mergedConfig(
     ],
   },
   {
-    retryPublicPath: "https://www.retryPublicPath.com",
+    retryPublicPath: "https://www.retryPublicPath.com", // 重试cdn
   }
 );
 ```
 
 ## extendConfig
-扩展weback的config，改变config；nuxtjs等框架中使用该方法
+扩展weback的config，改变config。nuxtjs等框架中使用该方法
 ```
 const { extendConfig } = require("webpack-sri-retry");
 
 module.exports = {
   build: {
-    /*
-     ** You can extend webpack config here
-     */
     extend(config, ctx) {
       if (ctx.isClient) {
         extendConfig(config, {
-          retryPublicPath: "https://www.retryPublicPath.com",
+          retryPublicPath: "https://www.retryPublicPath.com", // 重试cdn
         });
       }
     },
