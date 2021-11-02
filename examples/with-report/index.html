@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sri Retry Doc</title>
+  <script>
+    var BJ_REPORT = {};
+    BJ_REPORT.onFirstError = function ({ src }) {
+      console.log(`【sri - 开始回源】--${src}`);
+    };
+
+    BJ_REPORT.onRetryError = function ({ newSrc }) {
+      console.log(`【sri - 回源失败】--${newSrc}`);
+    };
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
