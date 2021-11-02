@@ -1,4 +1,4 @@
-# webpack-sri
+# webpack-sri-retry
 
 基于webpack4的sri（subresource integrity）易用解决方案，参考整合[webpack-subresource-integrity](https://github.com/waysact/webpack-subresource-integrity)、[webpack-retry-load-plugin](https://github.com/hxfdarling/webpack-retry-load-plugin)
 
@@ -17,10 +17,9 @@ yarn add --dev webpack-sri-retry
 ```
 
 # 使用
-## mergedConfig
+## mergedConfig(`config`, `options`)
 合并weback的config，不改变config。通常webapck配置文件中，使用该方法
 
-> mergedConfig(`config`, `options`)
 ```
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { mergedConfig } = require("webpack-sri-retry");
@@ -46,10 +45,9 @@ module.exports = mergedConfig(
 );
 ```
 
-## extendConfig
+## extend(`config`, `options`)
 扩展weback的config，改变config。nuxtjs等框架中使用该方法
 
-> extend(`config`, `options`)
 ```
 const { extendConfig } = require("webpack-sri-retry");
 
