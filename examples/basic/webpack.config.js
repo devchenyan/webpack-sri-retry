@@ -1,4 +1,4 @@
-var { mergedConfig } = require("webpack-sri-retry");
+const { mergedConfig } = require("webpack-sri-retry");
 
 module.exports = mergedConfig(
   {

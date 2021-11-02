@@ -1,11 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html {{ html_attrs }}>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sri Retry Doc</title>
+<head {{ head_attrs }}>
   <script>
     var BJ_REPORT = {};
     BJ_REPORT.reportFail = function ({ src }) {
@@ -16,10 +12,11 @@
       console.log(`【sri - 回源失败】--${newSrc}`);
     };
   </script>
+  {{ HEAD }}
 </head>
 
-<body>
-
+<body {{ body_attrs }}>
+  {{ APP }}
 </body>
 
 </html>

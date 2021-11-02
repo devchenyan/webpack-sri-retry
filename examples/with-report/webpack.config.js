@@ -8,6 +8,7 @@ module.exports = mergedConfig(
     },
     output: {
       filename: "bundle.js",
+      publicPath: "https://www.publicPath.com",
     },
     plugins: [
       new HtmlWebpackPlugin({
