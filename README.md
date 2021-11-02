@@ -13,7 +13,7 @@ npm install webpack-sri-retry -D
 
 or
 
-yarn add --dev webpack-sri-retry
+yarn add webpack-sri-retry -D
 ```
 
 ## 使用
