@@ -7,7 +7,7 @@
 - 插件必须配合 html-webpack-plugin 和 mini-css-extract-plugin
 - 可以配置监控，支持上报成功和失败的量
 
-# 安装
+## 安装
 ```
 npm install webpack-sri-retry -D
 
@@ -16,8 +16,8 @@ or
 yarn add --dev webpack-sri-retry
 ```
 
-# 使用
-## mergedConfig(`config`, `options`)
+## 使用
+### mergedConfig(`config`, `options`)
 合并weback的config，不改变config。通常webapck配置文件中，使用该方法
 
 ```
@@ -45,7 +45,7 @@ module.exports = mergedConfig(
 );
 ```
 
-## extend(`config`, `options`)
+### extend(`config`, `options`)
 扩展weback的config，改变config。nuxtjs等框架中使用该方法
 
 ```
