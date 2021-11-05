@@ -1,7 +1,7 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const { mergedConfig } = require("webpack-sri-retry");
+const { combineConfig } = require("webpack-sri-retry");
 
-module.exports = mergedConfig(
+module.exports = combineConfig(
   {
     entry: {
       index: "./index.js",

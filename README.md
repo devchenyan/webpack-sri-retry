@@ -17,14 +17,14 @@ yarn add webpack-sri-retry -D
 ```
 
 ## 使用
-### mergedConfig(`config`, `options`)
+### combineConfig(`config`, `options`)
 合并weback的config，不改变config。通常webapck配置文件中，使用该方法
 
 ```
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const { mergedConfig } = require("webpack-sri-retry");
+const { combineConfig } = require("webpack-sri-retry");
 
-module.exports = mergedConfig(
+module.exports = combineConfig(
   {
     entry: {
       index: "./index.js",
@@ -67,12 +67,20 @@ module.exports = {
 
 ## Options
 ### retryPublicPath
+
 自动从配置的retryPublicPath 重新下载失败的资源
 
 如未配置，则资源加载失败后不会进行重试
 
+### retryWithIntegrity
+Type: `string`
+
+Default: `false`
+
 ### hashFuncNames
-默认为 `["sha256"]`
+Type: `array`
+
+Default: `["sha256"]`
 
 如需特别配置参考：https://github.com/waysact/webpack-subresource-integrity/tree/1.x/#hashfuncnames
 
