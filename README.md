@@ -4,7 +4,7 @@
 
 - 自动为静态资源js/css添加integrity标识
 - 绑定自动从你配置的其它域名 (retryPublicPath) 重新下载那些失败的资源
-- 插件必须配合 html-webpack-plugin 和 mini-css-extract-plugin
+- 插件必须配合 html-webpack-plugin
 - 可以配置监控，支持上报成功和失败的量
 
 ## 安装
@@ -57,6 +57,7 @@ module.exports = {
       if (ctx.isClient) {
         extendConfig(config, {
           retryPublicPath: "https://www.retryPublicPath.com", // 重试cdn
+          ssr: true,
         });
       }
     },
@@ -67,15 +68,13 @@ module.exports = {
 
 ## Options
 ### retryPublicPath
+Type: `string`
+
+Default: `''`
 
 自动从配置的retryPublicPath 重新下载失败的资源
 
 如未配置，则资源加载失败后不会进行重试
-
-### retryWithIntegrity
-Type: `string`
-
-Default: `false`
 
 ### hashFuncNames
 Type: `array`
@@ -83,6 +82,27 @@ Type: `array`
 Default: `["sha256"]`
 
 如需特别配置参考：https://github.com/waysact/webpack-subresource-integrity/tree/1.x/#hashfuncnames
+
+### ssr
+Type: `boolean`
+
+Default: `false`
+
+如需要在服务端渲染项目中使用：
+
+- 需配置`ssr:true`
+
+- 同时在服务端response页面时使用`processedSSRTemplate`方法对html模版页面进行处理（为动态注入的js、css添加integrity及失败重试处理等标识）
+
+```
+如在nuxt中，通过hooks对html进行处理：
+
+'render:route'(url, result, context) {
+    if (!context.spa) {
+      result.html = processedSSRTemplate(result.html)
+    }
+  },
+```
 
 ## 上报
 入口模版中定义`BJ_REPORT`的report 或 reportFail、reportRetryFail
